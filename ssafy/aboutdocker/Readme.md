@@ -10,7 +10,7 @@
 
 > 도커는 리눅스의 응용 프로그램들을 **프로세스 격리 기술**들을 사용해 **컨테이너**로 실행하고 관리하는 오픈소스 프로젝트이다.
 
-![Untitled](%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%82%E1%85%A1%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%20a3da654dea3b407bb141b3a1e273cc0b/Untitled.png)
+![Untitled](./images/Untitled.png)
 
 - 컨테이너라는 단위로 OS 레벨의 가상화 구조
 - 각 컨테이너는 독립적인 환경에서 실행시킨다.
@@ -144,7 +144,7 @@ For more examples and ideas, visit:
 5. hello-world 이미지가 있으니 이미지를 이용해서 컨테이너 생성
 6. 생성된 컨테이너는 이미지를 받은 설정이나 조건에 따라 프로그램을 실행함.
 
-![Untitled](%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%82%E1%85%A1%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%20a3da654dea3b407bb141b3a1e273cc0b/Untitled%201.png)
+![Untitled](./images//Untitled%201.png)
 
 1. 이미지 다운받아 보기
 
@@ -152,7 +152,7 @@ For more examples and ideas, visit:
 docker pull nginx:latest
 ```
 
-![Untitled](%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%82%E1%85%A1%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%20a3da654dea3b407bb141b3a1e273cc0b/Untitled%202.png)
+![Untitled](./images//Untitled%202.png)
 
 - docker pull 명령어를 통해 이미지를 도커 허브에서 다운받을 수 있다.
 
@@ -162,7 +162,7 @@ docker pull nginx:latest
 
 1. 스프링 부트 프로젝트 하나 만들기.
 
-![Untitled](%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%82%E1%85%A1%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%20a3da654dea3b407bb141b3a1e273cc0b/Untitled%203.png)
+![Untitled](./images//Untitled%203.png)
 
 1. 터미널에서 build 실행
 
@@ -170,7 +170,7 @@ docker pull nginx:latest
 ./gradlew build
 ```
 
-![Untitled](%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%82%E1%85%A1%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%20a3da654dea3b407bb141b3a1e273cc0b/Untitled%204.png)
+![Untitled](./images//Untitled%204.png)
 
 - build후 jar 파일이 생성된것을 확인할 수 있다.
 
@@ -211,15 +211,15 @@ docker run -d -p 8080:8080 2e0c78514005 or(이름 지정 가능)
 -p : 포트 맵핑하기
 ```
 
-![Untitled](%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%82%E1%85%A1%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%20a3da654dea3b407bb141b3a1e273cc0b/Untitled%205.png)
+![Untitled](./images//Untitled%205.png)
 
 > **무슨일이 일어난걸까?**
 
-![Untitled](%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%82%E1%85%A1%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%20a3da654dea3b407bb141b3a1e273cc0b/Untitled%206.png)
+![Untitled](./images//Untitled%206.png)
 
 - 컨테이너들은 앞서 말한 Linux의 기술을 기반으로 커널(OS)를 공유하며, 컨테이너가 실행중임.
 
-![Untitled](%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%82%E1%85%A1%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%20a3da654dea3b407bb141b3a1e273cc0b/Untitled%207.png)
+![Untitled](./images//Untitled%207.png)
 
 - 도커 이미지에 있는 파일 스냅숏을 컨테이너의 디스크로 옮겨준다(물리적 이동X 논리적 격리)
 - 이후 이미지를 실행할 명령어도 옮겨준다.
@@ -298,7 +298,7 @@ docker build -t [계정이름]/[이미지이름]:[태그] .
 docker push dls3145/dockerpsring:0.1
 ```
 
-![Untitled](%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%82%E1%85%A1%20%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%20a3da654dea3b407bb141b3a1e273cc0b/Untitled%208.png)
+![Untitled](./images//Untitled%208.png)
 
 ### 실습 - ec2에 배포하기
 
